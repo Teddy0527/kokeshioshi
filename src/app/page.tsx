@@ -1,5 +1,6 @@
 import Link from 'next/link';
-import { products } from '@/data/products';
+import { ProductsGallery } from '@/components/products-gallery';
+import { faqItems } from '@/data/faq';
 
 const heroStory = ['これまでのこけしは、こどもの無事な成長を祈って贈られるものでした。', '「こけし推し」は、その祈りの文化を引き継ぎながら、今を生きるあなたやあなたの事業の挑戦を、そっとそばで"後推し"するこけしブランドです。', '飾るだけではなく、あなたの日々の節目に立ち、静かに背中を押してくれる小さな相棒としてのこけしです。'];
 
@@ -22,16 +23,16 @@ export default function HomePage() {
           </div>
           <div className="flex flex-wrap justify-center gap-6 pt-12 text-sm">
             <Link
-              href="/products"
+              href="/about"
               className="minimal-button text-sumi"
             >
-              プロダクトを見る
+              ブランドストーリーを読む
             </Link>
             <Link
-              href="/about"
+              href="/contact"
               className="minimal-button text-ink-soft hover:text-sumi"
             >
-              ブランドストーリーを読む
+              お問い合わせ
             </Link>
           </div>
         </div>
@@ -43,22 +44,23 @@ export default function HomePage() {
           <h2 className="ultra-luxury-text font-serif text-3xl text-sumi-deep">プロダクトライン</h2>
           <div className="mx-auto mt-6 h-px w-24 bg-gradient-to-r from-transparent via-kinpaku/40 to-transparent" />
         </header>
-        <div className="grid gap-14 md:grid-cols-3">
-          {products.map((product, index) => (
-            <article key={product.slug} className="group washi-card kinpaku-accent rounded-soft p-12" style={{ animationDelay: `${index * 0.1}s` }}>
-              <div className="mb-12 flex items-center justify-center bg-gradient-to-b from-sand-dark/20 to-transparent py-12">
-                <img src={product.heroImage} alt={product.name} className="h-56 w-auto opacity-92 transition-all duration-1000 group-hover:scale-105 group-hover:opacity-100" />
-              </div>
-              <div className="space-y-5">
-                <p className="text-xs font-light uppercase tracking-ultra-wide-jp text-kinpaku-aged">{product.category}</p>
-                <h3 className="font-serif text-2xl font-light tracking-wide-jp leading-relaxed-jp text-sumi">{product.name}</h3>
-                <p className="text-sm font-light leading-loose-jp text-ink-soft">{product.tagline}</p>
-                <p className="border-t border-kinpaku/10 pt-4 text-sm font-light tracking-wide-jp text-kinpaku-aged">{product.priceRange}</p>
-                <Link href={`/products/${product.slug}`} className="minimal-button mt-6 inline-block text-ink-soft hover:text-sumi">
-                  詳細へ
-                </Link>
-              </div>
-            </article>
+        <ProductsGallery />
+      </section>
+
+      <section className="mx-auto max-w-4xl">
+        <header className="mb-20 space-y-4 text-center">
+          <p className="text-xs font-light uppercase tracking-ultra-wide-jp text-kinpaku-aged">FAQ</p>
+          <h2 className="ultra-luxury-text font-serif text-3xl text-sumi-deep">よくある質問</h2>
+          <div className="mx-auto mt-6 h-px w-24 bg-gradient-to-r from-transparent via-kinpaku/40 to-transparent" />
+        </header>
+        <div className="space-y-6">
+          {faqItems.map((item) => (
+            <details key={item.question} className="group washi-card kinpaku-accent rounded-soft p-10 transition-all duration-300 hover:shadow-washi_hover">
+              <summary className="cursor-pointer font-serif text-lg font-light tracking-wide-jp text-sumi transition-colors duration-300 group-hover:text-kinpaku-dark md:text-xl">
+                {item.question}
+              </summary>
+              <p className="mt-6 text-sm font-light leading-loose-jp text-ink-soft">{item.answer}</p>
+            </details>
           ))}
         </div>
       </section>
