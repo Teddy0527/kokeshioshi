@@ -4,7 +4,7 @@ import type { Product } from '@/data/products';
 const accentMap = {
   oshikokeshi: 'from-accent-oshikokeshi/30 to-sand-dark/20',
   shachokokeshi: 'from-accent-shachokokeshi/25 to-sand-dark/20',
-  story: 'from-accent-story/30 to-sand-dark/20'
+  ochokokeshi: 'from-accent-story/30 to-sand-dark/20'
 } as const;
 
 export function ProductCard({ product }: { product: Product }) {
