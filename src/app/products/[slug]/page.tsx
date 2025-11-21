@@ -68,14 +68,6 @@ export default function ProductDetailPage({ params }: Props) {
           </div>
         </dl>
         <div className="space-y-6 text-sm text-ink-soft">
-          <div>
-            <h2 className="font-serif text-xl tracking-relaxed-jp text-ink">利用シーン</h2>
-            <ul className="mt-4 list-disc space-y-2 pl-5 leading-loose-jp">
-              {product.useScenes.map((scene) => (
-                <li key={scene}>{scene}</li>
-              ))}
-            </ul>
-          </div>
           <p className="text-xs tracking-wide-jp text-ink-light">納期目安：{product.leadTime}</p>
           <Link
             href={`/contact?product=${product.name}`}
