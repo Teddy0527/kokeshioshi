@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "vercel-deploy": {
+      "command": "node",
+      "args": ["/Users/kohteddy/Desktop/こけしnew/mcp-server/index.js"]
+    }
+  }
+}
