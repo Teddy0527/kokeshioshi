@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { mainNav } from '@/lib/navigation';
+import Image from 'next/image';
 
 export function SiteFooter() {
   const year = new Date().getFullYear();
@@ -7,12 +8,14 @@ export function SiteFooter() {
     <footer className="mt-48 border-t-2 border-kinpaku/10 bg-gradient-to-b from-sand-dark/20 to-sand-dark/40 md:mt-72">
       <div className="mx-auto flex max-w-6xl flex-col gap-20 px-8 py-28 md:flex-row md:items-start md:justify-between md:py-36">
         <div className="space-y-10">
-          <div className="space-y-5">
-            <div className="flex items-center gap-4">
-              <p className="font-serif text-xl font-light tracking-ultra-wide-jp text-sumi">こけし推し</p>
-              <div className="h-px w-16 bg-gradient-to-r from-kinpaku/40 to-transparent" />
-            </div>
-            <p className="text-sm font-light leading-loose-jp tracking-wide-jp text-ink-soft">静かな後推しをあなたに。</p>
+          {/* ロゴ画像を追加 */}
+          <div className="relative h-32 w-72 opacity-90">
+            <Image
+              src="/images/logo.png"
+              alt="こけし推し"
+              fill
+              className="object-contain object-left"
+            />
           </div>
           <div className="space-y-3">
             <p className="text-xs font-light tracking-ultra-wide-jp text-kinpaku-aged">© {year} Oshikokeshi.</p>

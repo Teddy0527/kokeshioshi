@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 import { mainNav } from '@/lib/navigation';
+import Image from 'next/image';
 
 export function SiteHeader() {
   const pathname = usePathname();
@@ -11,13 +12,18 @@ export function SiteHeader() {
 
   return (
     <header className="sticky top-0 z-50 border-b sumi-border-light backdrop-blur-lg shadow-washi transition-all duration-500" style={{ backgroundColor: 'rgba(255, 254, 249, 0.98)' }}>
-      <div className="mx-auto flex max-w-6xl items-center justify-between px-8 py-6">
-        <Link href="/" className="group flex items-center gap-6 transition-all duration-700" onClick={() => setOpen(false)}>
-          <div className="vertical-text font-serif text-sm font-light tracking-ultra-wide-jp text-sumi transition-colors duration-700 group-hover:text-kinpaku-dark">
-            こけし推し
+      <div className="mx-auto flex max-w-6xl items-center justify-between px-8 py-7">
+        <Link href="/" className="group transition-all duration-700" onClick={() => setOpen(false)}>
+          {/* ロゴ画像を追加 */}
+          <div className="relative h-20 w-60 transition-opacity duration-700 group-hover:opacity-80">
+            <Image
+              src="/images/logo.png"
+              alt="推しこけし"
+              fill
+              className="object-contain object-left"
+              priority
+            />
           </div>
-          <div className="h-16 w-px bg-gradient-to-b from-transparent via-kinpaku/30 to-transparent transition-all duration-700 group-hover:via-kinpaku/50" aria-hidden />
-          <span className="font-serif text-xs font-light tracking-ultra-wide-jp text-ink-soft transition-colors duration-700 group-hover:text-ink">Back Support</span>
         </Link>
         <button
           className="h-10 w-10 border-none text-xs font-light tracking-ultra-wide-jp text-ink-soft transition-all duration-700 hover:text-sumi md:hidden"

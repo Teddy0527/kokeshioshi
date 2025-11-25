@@ -16,12 +16,12 @@ export function generateMetadata({ params }: Props): Metadata {
   const product = getProductBySlug(params.slug);
   if (!product) {
     return {
-      title: 'プロダクト | こけし推し',
-      description: 'こけし推しのプロダクト'
+      title: 'プロダクト | 推しこけし',
+      description: '推しこけしのプロダクト'
     };
   }
   return {
-    title: `${product.name} | こけし推し`,
+    title: `${product.name} | 推しこけし`,
     description: product.description
   };
 }

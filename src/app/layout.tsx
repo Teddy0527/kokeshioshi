@@ -10,20 +10,20 @@ const notoSerif = Noto_Serif_JP({ subsets: ['latin'], weight: ['300', '400'], va
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 
 export const metadata: Metadata = {
-  title: 'こけし推し | 静かに挑戦を後押しするブランドサイト',
-  description: '推しこけし・社長こけしを中心に、挑戦の節目を静かに支えるブランド「こけし推し」の世界観とプロダクトをご紹介します。',
+  title: '推しこけし | 静かに挑戦を後押しするブランドサイト',
+  description: '推しこけし・社長こけしを中心に、挑戦の節目を静かに支えるブランド「推しこけし」の世界観とプロダクトをご紹介します。',
   metadataBase: new URL('https://example.com'),
   openGraph: {
-    title: 'こけし推し',
+    title: '推しこけし',
     description: '静かに挑戦を後押しするブランド',
     url: 'https://example.com',
-    siteName: 'こけし推し',
+    siteName: '推しこけし',
     locale: 'ja_JP',
     type: 'website'
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'こけし推し',
+    title: '推しこけし',
     description: '挑戦の節目を静かに後押しするこけしブランド'
   }
 };

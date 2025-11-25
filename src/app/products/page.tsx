@@ -3,8 +3,8 @@ import { ProductsGallery } from '@/components/products-gallery';
 import { SectionHeading } from '@/components/section-heading';
 
 export const metadata: Metadata = {
-  title: 'プロダクト | こけし推し',
-  description: '推しこけし、社長こけし、おちょこけし。伝統と挑戦を形にした、こけし推しのプロダクトラインナップ。'
+  title: 'プロダクト | 推しこけし',
+  description: '推しこけし、社長こけし、おちょこけし。伝統と挑戦を形にした、推しこけしのプロダクトラインナップ。'
 };
 
 export default function ProductsPage() {
