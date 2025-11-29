@@ -14,7 +14,6 @@ export function SiteHeader() {
     <header className="sticky top-0 z-50 border-b sumi-border-light backdrop-blur-lg shadow-washi transition-all duration-500" style={{ backgroundColor: 'rgba(255, 254, 249, 0.98)' }}>
       <div className="mx-auto flex max-w-6xl items-center justify-between px-8 py-7">
         <Link href="/" className="group transition-all duration-700" onClick={() => setOpen(false)}>
-          {/* ロゴ画像を追加 */}
           <div className="relative h-20 w-60 transition-opacity duration-700 group-hover:opacity-80">
             <Image
               src="/images/logo.png"

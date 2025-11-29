@@ -41,7 +41,7 @@ export default function HomePage() {
       <section className="mx-auto max-w-6xl">
         <header className="mb-20 space-y-4 text-center">
           <p className="text-xs font-light uppercase tracking-ultra-wide-jp text-kinpaku-aged">Products</p>
-          <h2 className="ultra-luxury-text font-serif text-3xl text-sumi-deep">プロダクトライン</h2>
+          <h2 className="ultra-luxury-text font-serif text-3xl text-sumi-deep">こけしたち</h2>
           <div className="mx-auto mt-6 h-px w-24 bg-gradient-to-r from-transparent via-kinpaku/40 to-transparent" />
         </header>
         <ProductsGallery />

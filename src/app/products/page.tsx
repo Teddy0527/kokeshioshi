@@ -13,7 +13,7 @@ export default function ProductsPage() {
       <div className="space-y-8 text-center">
         <SectionHeading
           eyebrow="Products"
-          title="プロダクトラインナップ"
+          title="こけしたち"
         />
         <p className="mx-auto max-w-2xl text-sm leading-loose-jp tracking-wide-jp text-ink-soft">
           伝統こけしの技法を受け継ぎながら、<br className="hidden md:inline" />

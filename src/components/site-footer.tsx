@@ -8,11 +8,10 @@ export function SiteFooter() {
     <footer className="mt-48 border-t-2 border-kinpaku/10 bg-gradient-to-b from-sand-dark/20 to-sand-dark/40 md:mt-72">
       <div className="mx-auto flex max-w-6xl flex-col gap-20 px-8 py-28 md:flex-row md:items-start md:justify-between md:py-36">
         <div className="space-y-10">
-          {/* ロゴ画像を追加 */}
           <div className="relative h-32 w-72 opacity-90">
             <Image
               src="/images/logo.png"
-              alt="こけし推し"
+              alt="推しこけし"
               fill
               className="object-contain object-left"
             />

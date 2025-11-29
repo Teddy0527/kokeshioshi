@@ -81,7 +81,7 @@ export function ContactForm() {
           </FormField>
           <div className="grid gap-8 md:grid-cols-3">
             <FormField label="個数 / 予算感">
-              <input name="budget" className="input" placeholder="例：2体 / 10万円" />
+              <input name="budget" className="input" placeholder="例：2体 / 1万円" />
             </FormField>
             <FormField label="用途">
               <select name="usage" className="input">
